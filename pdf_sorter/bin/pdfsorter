@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+require "thor"
+require_relative '../lib/pdf_sorter'
+require_relative '../lib/pdf_sorter/rule'
+
+class MyCLI < Thor
+  desc "runrules RULESFILE", "Read and execute rules in RULESFILE"
+  def runrules(name)
+    #load rules from arg
+    eval(File.read('../examples/rules.rb'))
+
+  end
+  
+  private
+  def sort_rule(rule_name, &block)
+    r = Rule.new rule_name
+    r.instance_eval(&block)
+  end
+
+  def inbox_path(path)
+    rs = RuleSet.new(path)
+    @ps = PdfSorter.new(rs)
+  end
+  
+end
+
+MyCLI.start(ARGV)
+sleep
