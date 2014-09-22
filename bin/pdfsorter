@@ -12,6 +12,8 @@ class MyCLI < Thor
   end
   
   private
+  
+  # Entry for DSL
   def sort_rule(rule_name, &block)
     r = Rule.new rule_name
     r.instance_eval(&block)

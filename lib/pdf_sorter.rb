@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require 'directory_watcher'
 require 'docsplit'
 
