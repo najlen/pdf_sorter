@@ -1,16 +1,16 @@
-inbox_path '/Users/najlen/docSync/projekt/PDF sorter/inbox'
+inbox_path '/Users/najlen/Dropbox/scans'
 
-sort_rule 'Företag' do
-	match_strings "GrandTotal"
-	target_folder 'företag'
+sort_rule 'Work' do
+	match_strings "CompanyName"
+	target_folder 'work'
 end
 
-sort_rule 'Skattepapper' do
-	match_strings "skatt, rsv"
-	target_folder 'skattepapper'
+sort_rule 'Tax papers' do
+	match_strings "tax, irs"
+	target_folder 'tax_papers'
 end
 
-sort_rule 'Sbab' do
-	match_strings "BÄTTRE BOLÅN"
-	target_folder 'bolån'
+sort_rule 'Mortgage' do
+	match_strings "acme bank, interest"
+	target_folder 'house'
 end
